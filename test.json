@@ -1,0 +1,49 @@
+{
+  "mirrors": [
+    {
+      "available": true,
+      "date_updated": 1429654511,
+      "mirror_key": "ahFzfmN5bmduLWZvdGEtcHJvZHIWCxIGTWlycm9yIgpjbG91ZGZyb250DA",
+      "date_last_available": 1429654511,
+      "http_status": 200,
+      "date_created": 1429654285
+    },
+    {
+      "available": false,
+      "date_updated": 1429654512,
+      "mirror_key": "ahFzfmN5bmduLWZvdGEtcHJvZHISCxIGTWlycm9yIgZkaXN0MDEM",
+      "date_last_available": 0,
+      "http_status": 302,
+      "date_created": 1429654285
+    },
+    {
+      "available": false,
+      "date_updated": 1429654513,
+      "mirror_key": "ahFzfmN5bmduLWZvdGEtcHJvZHISCxIGTWlycm9yIgZkaXN0MDIM",
+      "date_last_available": 0,
+      "http_status": 302,
+      "date_created": 1429654285
+    }
+  ],
+  "date_updated": "2015-06-06T23:02:19.507300Z",
+  "incremental": "e816218e8a",
+  "required_incremental": false,
+  "size": 598381556,
+  "build_number": 3693,
+  "incremental_parent": null,
+  "download_url": "http://arjan1995.raspctl.com/test.txt",
+  "filename": "cm-12.0-YNG1TAS17L-bacon-signed.zip",
+  "sha1sum": "b54e0258363eb8b033f6b08327a428badc202c37",
+  "type": "STABLE",
+  "description": "",
+  "date_created_unix": 1429649532,
+  "rollout_percentage": 100,
+  "key": "ahFzfmN5bmduLWZvdGEtcHJvZHIYCxILU2lnbmVkQnVpbGQYgICAgNOKgwoM",
+  "path": "cyanogen-os/bacon/12.0-YNG1TAS17L-bacon/e816218e8a/cm-12.0-YNG1TAS17L-bacon-signed.zip",
+  "name": "YNG1TAS17L",
+  "md5sum": "075e5748582ff0ebcca1f334856d637c",
+  "published": true,
+  "date_created": "2015-04-21T20:52:12.000000Z",
+  "model": "bacon",
+  "api_level": 21
+}
