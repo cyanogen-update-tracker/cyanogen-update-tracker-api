@@ -1,6 +1,6 @@
 <?php
 //Establish a database connection
-include 'databaseConnector.php';
+include 'DatabaseConnector.php';
 $databaseConnector = new databaseConnector();
 $database = $databaseConnector->connectToDb();
 
