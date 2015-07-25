@@ -6,7 +6,8 @@
 </head>
 <body>
 <?php
-    echo "This is just a test page :)";
+    echo "API Status: \n"; //FIXME fill in status from db
+    echo "API Version : "; //FIXME version number in db
 
 ?>
 
