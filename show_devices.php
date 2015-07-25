@@ -1,5 +1,5 @@
 <?php
-include "DatabaseConnector.php";
+include 'Repository/DatabaseConnector.php';
 $databaseConnector = new databaseConnector();
 $database = $databaseConnector->connectToDb();
 

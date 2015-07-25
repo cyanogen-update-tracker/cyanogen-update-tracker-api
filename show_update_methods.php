@@ -1,4 +1,5 @@
 <?php
+include 'Repository/DatabaseConnector.php';
 $device_id = $_GET["device_id"];
 $databaseConnector = new databaseConnector();
 $database = $databaseConnector->connectToDb();
