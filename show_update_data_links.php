@@ -1,6 +1,6 @@
 <?php
 include 'Repository/DatabaseConnector.php';
-$databaseConnector = new databaseConnector();
+$databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 // TODO add filtering with update method and device type
 $device_list = $database->query("SELECT * FROM update_data_link");

@@ -1,7 +1,7 @@
 <?php
 include 'Repository/DatabaseConnector.php';
 $device_id = $_GET["device_id"];
-$databaseConnector = new databaseConnector();
+$databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 
 $query_all = "SELECT * FROM update_method";

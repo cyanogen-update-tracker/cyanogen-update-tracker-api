@@ -1,7 +1,7 @@
 <?php
 //Establish a database connection
 include 'Repository/DatabaseConnector.php';
-$databaseConnector = new databaseConnector();
+$databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 
 //Get JSON from request

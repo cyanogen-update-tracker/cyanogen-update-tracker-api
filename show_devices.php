@@ -1,6 +1,6 @@
 <?php
 include 'Repository/DatabaseConnector.php';
-$databaseConnector = new databaseConnector();
+$databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 
 $device_list = $database->query("SELECT id, device_name FROM device_type WHERE enabled = TRUE");
