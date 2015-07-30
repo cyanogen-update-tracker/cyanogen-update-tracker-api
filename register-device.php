@@ -10,21 +10,12 @@ $json = json_decode(file_get_contents('php://input'), true);
 //Get variables from JSON
 $registrationToken = $json["registration_token"];
 $oldRegistrationToken = $json["old_registration_token"];
-$deviceType = $json{"device_type"};
-$updateMethod = $json{"update_method"};
+$deviceTypeId = $json{"device_id"};
+$updateMethodId = $json{"update_method_id"};
 $appVersion = $json["app_version"];
 
-//Get IDs from supplied device names
-$deviceTypeId = "0";
-$updateMethodId = "0";
-$result1 = $database->query("SELECT * FROM device_type WHERE device_name = '".$deviceType."' AND enabled = TRUE");
-$deviceTypeId = $result1->fetchAll(PDO::FETCH_ASSOC)["id"];
-
-$result2 = $database->query("SELECT * FROM update_method WHERE update_method = '".$updateMethod."'");
-$updateMethodId = $result2->fetchAll(PDO::FETCH_ASSOC)["id"];
-
 //Check if supplied data is valid
-if($deviceTypeId == "0") {
+if($deviceTypeId == null || $deviceTypeId == "") {
     $error = array(
         "error" => "Invalid tracking device specified."
     );
@@ -34,7 +25,7 @@ if($deviceTypeId == "0") {
     echo(json_encode($error));
 }
 
-if($updateMethodId == "0") {
+if($updateMethodId == "") {
     $error = array(
         "error" => "Invalid tracking update type specified."
     );
