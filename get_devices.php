@@ -3,7 +3,7 @@ include 'Repository/DatabaseConnector.php';
 $databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 
-$device_list = $database->query("SELECT id, device_name FROM device_type WHERE enabled = TRUE");
+$device_list = $database->query("SELECT id, device_name FROM device WHERE enabled = TRUE");
 
 // Return the output as JSON
 header('Content-type: application/json');
