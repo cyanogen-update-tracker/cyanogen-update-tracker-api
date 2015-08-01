@@ -38,12 +38,10 @@ if($updateMethodId == null || $updateMethodId == "") {
 //Delete old registration from the database if it is supplied
 if($oldRegistrationToken != null && $oldRegistrationToken != "") {
     $deleteResult = $database->query("DELETE FROM device_registration where registration_token = '$oldRegistrationToken'");
-    $deleteResult->execute();
 }
 
 // register the device to the database.
 $result = $database->query("INSERT INTO device_registration(registration_token, device_id, update_method_id, registration_date, app_version) VALUES ('$registrationToken', '$deviceId', '$updateMethodId', NOW(), '$appVersion')");
-$result->execute();
 
 // Disconnect from the database.
 $database = null;
