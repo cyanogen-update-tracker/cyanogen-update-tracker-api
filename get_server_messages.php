@@ -3,7 +3,7 @@ include "Repository/DatabaseConnector.php";
 $databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 
-$query = $database->query("SELECT id, message, message_nl, priority, marquee FROM server_message WHERE enabled = TRUE");
+$query = $database->query("SELECT id, message, message_nl, device_id, priority, marquee FROM server_message WHERE enabled = TRUE");
 
 // Return the output as JSON
 header('Content-type: application/json');
