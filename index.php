@@ -6,8 +6,13 @@
 </head>
 <body>
 <?php
-    echo "API Status: \n"; //FIXME fill in status from db
-    echo "API Version : "; //FIXME version number in db
+    include 'Repository/DatabaseConnector.php';
+    $databaseConnector = new DatabaseConnector();
+    $database = $databaseConnector->connectToDb();
+    $query = $database->query("SELECT status, latest_app_version FROM server_status");
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+    echo "API Status: ".$result[0]["status"]." <br/>";
+    echo "Latest app version: ".$result[0]["latest_app_version"]." <br/>";
 
 ?>
 
