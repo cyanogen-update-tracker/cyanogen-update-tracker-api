@@ -2,48 +2,48 @@
    "mirrors":[
       {
          "available":true,
-         "date_updated":1443141020,
+         "date_updated":1431383415,
          "mirror_key":"ahFzfmN5bmduLWZvdGEtcHJvZHIWCxIGTWlycm9yIgpjbG91ZGZyb250DA",
-         "date_last_available":1443141020,
+         "date_last_available":1431383415,
          "http_status":200,
-         "date_created":1443140373
+         "date_created":1431383221
       },
       {
          "available":false,
-         "date_updated":1443141020,
+         "date_updated":1437398107,
          "mirror_key":"ahFzfmN5bmduLWZvdGEtcHJvZHISCxIGTWlycm9yIgZkaXN0MDEM",
          "date_last_available":0,
          "http_status":302,
-         "date_created":1443140373
+         "date_created":1431383221
       },
       {
          "available":false,
-         "date_updated":1444455913,
+         "date_updated":1444717812,
          "mirror_key":"ahFzfmN5bmduLWZvdGEtcHJvZHISCxIGTWlycm9yIgZkaXN0MDIM",
          "date_last_available":0,
          "http_status":302,
-         "date_created":1443140373
+         "date_created":1431383221
       }
    ],
    "date_updated":"2014-11-29T00:13:22.000000Z",
-   "incremental":"49d90510ef",
-   "required_incremental":false,
+   "incremental":"c991cd279d",
+   "required_incremental":true,
    "size":465711528,
-   "build_number":8126,
-   "incremental_parent":null,
+   "build_number":null,
+   "incremental_parent":"00b2e333e8",
    "download_url":"http://builds.cyngn.com/fota/1609/cm-11.0-XNPH40P-n1-signed.zip",
    "filename":"cm-11.0-XNPH40P-n1-signed.zip",
-   "sha1sum":"032fd92a948b895eed67e087e610e40e778b00ab",
-   "type":"STABLE",
+   "sha1sum":"3D8E5652822B9E4EF6FFCDA536C0D806236CD230",
+   "type":"INCREMENTAL",
    "description":"This update will update your device to Cyanogen OS 11, powered by Android 4.4.4 KitKat.",
-   "date_created_unix":1443130959,
+   "date_created_unix":1431383108,
    "rollout_percentage":100,
-   "key":"ahFzfmN5bmduLWZvdGEtcHJvZHIYCxILU2lnbmVkQnVpbGQYgICAgM7fhwoM",
+   "key":"ahFzfmN5bmduLWZvdGEtcHJvZHIYCxILU2lnbmVkQnVpbGQYgICAgPa8igoM",
    "path":"fota/1609/cm-11.0-XNPH40P-n1-signed.zip",
-   "name":"XNPH40P",
+   "name":"XNPH40P Incremental",
    "md5sum":"14CC46B307DBFD5159D453E8498DD088",
    "published":true,
-   "date_created":"2015-09-24T21:42:39.000000Z",
+   "date_created":"2015-10-21T21:12:07.000000Z",
    "model":"n1",
-   "api_level":21
+   "api_level":null
 }
