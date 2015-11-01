@@ -41,9 +41,9 @@
    "key":"ahFzfmN5bmduLWZvdGEtcHJvZHIYCxILU2lnbmVkQnVpbGQYgICAgM7fhwoM",
    "path":"factory/lettuce/cm-12.0-YNG1TBS2P2-lettuce-signed.zip",
    "name":"YNG1TBS2P2",
-   "md5sum":"24ffc1cdbb5144b440b39dbd438c1de8",
+   "md5sum":"e11de971325db5883f8cfb60270dd450",
    "published":true,
    "date_created":"2015-09-24T21:42:39.000000Z",
-   "model":"bacon",
+   "model":"lettuce",
    "api_level":21
 }

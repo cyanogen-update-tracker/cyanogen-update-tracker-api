@@ -28,7 +28,7 @@
    "date_updated":"2015-10-21T21:12:07.000000Z",
    "incremental":"c991cd279d",
    "required_incremental":true,
-   "size":28130225,
+   "size":37288948,
    "build_number":null,
    "incremental_parent":"00b2e333e8",
    "download_url":"http://builds.cyngn.com/fota/incremental/lettuce/cm-lettuce-405aaf9dc6-to-79f9ccdc85-signed.zip",
@@ -41,9 +41,9 @@
    "key":"ahFzfmN5bmduLWZvdGEtcHJvZHIYCxILU2lnbmVkQnVpbGQYgICAgPa8igoM",
    "path":"fota/incremental/lettuce/cm-lettuce-405aaf9dc6-to-79f9ccdc85-signed.zip",
    "name":"12.0 YNG1TBS2P2 Incremental",
-   "md5sum":"7D414F81687B56C53B1FE0E0AC460BDC",
+   "md5sum":"F4193023461762548DD9B1BE3D8709FE",
    "published":true,
    "date_created":"2015-10-21T21:12:07.000000Z",
-   "model":"tomato",
-   "api_level":null
+   "model":"lettuce",
+   "api_level":21
 }
