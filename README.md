@@ -39,7 +39,7 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 ###Version Data
 - You can use the bundled version data or a version data API from Cyanogen if it exists.
 - The app will automatically read the version data from the `update_data_link` specified in the database.
-- Follow the einstructions of the push_sender project to update the version data in the database (only for push notifications).
+- Follow the einstructions of the [push sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-push-sender) to update the version data in the database (for push notifications).
 
 #Notes
 - Using a Cyanogen API for version data is at your own risk. If Cyanogen sues you, I'm not responsible.
