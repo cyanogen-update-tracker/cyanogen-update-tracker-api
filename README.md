@@ -23,7 +23,7 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 
 ###Setting up the database:
 - Add the MySQL username and password in `Repository/DatabaseConnector.php` 
-- Execute the MySQL database creation script from Git:
+- Execute the MySQL database creation script from Git (`database.sql`):
 
 ####VPS:
 - Log in using SSH and execute `mysql -u [user_name] -p[root_password] [database_name] < import-mysql.sql`
