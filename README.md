@@ -32,9 +32,15 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 - Use PHPMyAdmin and restore `import-phpmyadmin.sql`
 
 
+###Deploying the API
+- On your server, create a folder called `api` and inside create a folder called `v1.1`.
+- Copy the cloned project to the `v1.1` folder, except for the database files.
+
+
 ###Testing the API
-- You should be able to navigate to `<your_domain_name>/devices` and see a list of all the devices.
-- If this does not work or if you are not using Apache, then navigate to `<your_domain_name>/get_devices.php`.
+- You should be able to navigate to `<your_domain_name>/api/v1.1/devices` and see a list of all the devices.
+- If this does not work or if you are not using Apache, then navigate to `<your_domain_name>/api/v1.1/get_devices.php`.
+
 
 ###Version Data
 - You can use the bundled version data or a version data API from Cyanogen if it exists.
