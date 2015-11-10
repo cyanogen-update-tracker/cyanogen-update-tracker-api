@@ -26,16 +26,24 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 - Execute the MySQL database creation script from Git (`database.sql`):
 
 ####VPS:
-- Log in using SSH and execute `mysql -u [user_name] -p[root_password] [database_name] < import-mysql.sql`
+- Log in using SSH and execute `mysql -u [user_name] -p[root_password] [database_name] < database.sql`
 
 ####Hosting:
-- Use PHPMyAdmin and restore `import-phpmyadmin.sql`
+- Use PHPMyAdmin and restore `database.sql`
 
 
 ###Deploying the API
 - On your server, create a folder called `api` and inside create a folder called `v1.1`.
 - Copy the cloned project to the `v1.1` folder, except for the database files.
 
+- Your server will have the following lay-out:
+ _ _ _ _
+|-> api
+|    -> v1.1 -> this project.
+|-> test
+|    -> api
+|        -> v1.1 -> the [test sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-test-api))
+|_ _ _ _
 
 ###Testing the API
 - You should be able to navigate to `<your_domain_name>/api/v1.1/devices` and see a list of all the devices.
