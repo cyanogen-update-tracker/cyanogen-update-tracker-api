@@ -38,7 +38,7 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 
 - Your server will have the following lay-out:
     - /api/v1.1/ -> this project.
-    - /test/api/v1.1 -> the [test sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-test-api).
+    - /test/api/v1.1 -> the [test API project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-test-api).
 
 ###Testing the API
 - You should be able to navigate to `<your_domain_name>/api/v1.1/devices` and see a list of all the devices.
