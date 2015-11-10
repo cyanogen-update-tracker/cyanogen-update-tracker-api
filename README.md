@@ -37,13 +37,8 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 - Copy the cloned project to the `v1.1` folder, except for the database files.
 
 - Your server will have the following lay-out:
- _ _ _ _
-|-> api
-|    -> v1.1 -> this project.
-|-> test
-|    -> api
-|        -> v1.1 -> the [test sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-test-api))
-|_ _ _ _
+    - /api/v1.1/ -> this project.
+    - /test/api/v1.1 -> the [test sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-test-api).
 
 ###Testing the API
 - You should be able to navigate to `<your_domain_name>/api/v1.1/devices` and see a list of all the devices.
@@ -53,7 +48,7 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 ###Version Data
 - You can use the bundled version data or a version data API from Cyanogen if it exists.
 - The app will automatically read the version data from the `update_data_link` specified in the database.
-- Follow the einstructions of the [push sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-push-sender) to update the version data in the database (for push notifications).
+- Follow the instructions of the [push sender project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-push-sender) to update the version data in the database (for push notifications).
 
 #Notes
 - Using a Cyanogen API for version data is at your own risk. If Cyanogen sues you, I'm not responsible.
