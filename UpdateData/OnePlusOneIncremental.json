@@ -37,7 +37,7 @@
    "type":"INCREMENTAL",
    "description":"This maintenance release provides bug fixes and critical security updates for your device.",
    "date_created_unix":1444702491,
-   "rollout_percentage":5,
+   "rollout_percentage":75,
    "key":"ahFzfmN5bmduLWZvdGEtcHJvZHIYCxILU2lnbmVkQnVpbGQYgICAwLSkgwoM",
    "path":"cm-bacon-49d90510ef-to-d91bf047f5-signed.zip",
    "name":"12.1-YOG4PAS3JL Incremental",
