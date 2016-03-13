@@ -4,7 +4,7 @@ $device_id = $_GET["device_id"];
 $databaseConnector = new DatabaseConnector();
 $database = $databaseConnector->connectToDb();
 
-$query = "SELECT * FROM update_method WHERE id IN (SELECT update_method_id FROM update_data_link WHERE device_id = $device_id)";
+$query = "SELECT id, update_method, update_method_nl, recommended FROM update_method WHERE id IN (SELECT update_method_id FROM update_data_link WHERE device_id = $device_id)";
 
 if($device_id != null && $device_id != "") {
     $result = $database->query($query);
