@@ -1,13 +1,16 @@
- <?php
+<?php
 include "Repository/DatabaseConnector.php";
- $databaseConnector = new DatabaseConnector();
- $database = $databaseConnector->connectToDb();
 
- $query = $database->query("SELECT status, latest_app_version FROM server_status");
+// Connect to the database
+$databaseConnector = new DatabaseConnector();
+$database = $databaseConnector->connectToDb();
 
- // Return the output as JSON
- header('Content-type: application/json');
- echo (json_encode($query->fetchAll(PDO::FETCH_ASSOC)));
+// Execute the query
+$query = $database->query("SELECT status, latest_app_version FROM server_status");
 
- // Disconnect from the database
- $database = null;
+// Return the output as JSON
+header('Content-type: application/json');
+echo (json_encode($query->fetchAll(PDO::FETCH_ASSOC)));
+
+// Disconnect from the database
+$database = null;

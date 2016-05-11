@@ -1,6 +1,6 @@
 <?php
 
-class databaseConnector {
+class DatabaseConnector {
     public function connectToDb() {
         $username = "** Add your database username here **";
         $password = "** Add your database password here **";
@@ -9,6 +9,4 @@ class databaseConnector {
         $database = new PDO('mysql:host='.$server_address.';dbname='.$database_name.'',$username, $password);
         return $database;
     }
-
-
 }
