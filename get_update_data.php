@@ -41,9 +41,40 @@ if($device_id != null && $update_method_id != null && $device_id != "" && $updat
 
     // If there are no results, the system is up to date or no update information has been found. Else, return the result.
     if($query->rowCount() == 0) {
-        echo json_encode(array("information" => "unable to find a more recent build"));
+        $totalCountQuery = $database->prepare("SELECT COUNT(*) FROM update_data_new WHERE device_id = :device_id AND update_method_id = :update_method_id");
+        $totalCountQuery->bindParam(':device_id', $device_id);
+        $totalCountQuery->bindParam(':update_method_id', $update_method_id);
+        $totalCountQuery->execute();
+
+        $totalCountResult = $totalCountQuery->fetch(PDO:: FETCH_COLUMN);
+        error_log($totalCountResult);
+
+        $systemIsUpToDateQuery = $database->prepare("SELECT incremental FROM update_data_new WHERE device_id = :device_id AND update_method_id = :update_method_id AND is_latest_version = 1 ORDER BY id DESC LIMIT 1");
+        $systemIsUpToDateQuery->bindParam(':device_id', $device_id);
+        $systemIsUpToDateQuery->bindParam(':update_method_id', $update_method_id);
+        $systemIsUpToDateQuery->execute();
+
+        $systemIsUpToDateResult = $systemIsUpToDateQuery->fetch(PDO:: FETCH_ASSOC);
+
+        $systemIsUpToDate = false;
+
+        if($updateMethod['requires_incremental_parent'] == true) {
+            $systemIsUpToDate = ($systemIsUpToDateResult["incremental"] == $incremental_parent);
+        } else {
+            $systemIsUpToDate = true;
+        }
+
+        echo json_encode(array("information" => "unable to find a more recent build", "update_information_available" => $totalCountResult[0] != 0, "system_is_up_to_date" => $systemIsUpToDate));
     } else {
-        echo(json_encode($query->fetch(PDO::FETCH_ASSOC)));
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        $result["update_information_available"] = true;
+        $result["system_is_up_to_date"] = false;
+        // Add filename to result
+        $filename = array();
+        preg_match('([^/]+$)', $result['download_url'], $filename);
+        $result['filename'] = $filename[0];
+
+        echo(json_encode($result));
     }
 
     // Disconnect from the database
@@ -51,5 +82,5 @@ if($device_id != null && $update_method_id != null && $device_id != "" && $updat
 }
 // If the device or update method IDs are not supplied, throw an error message.
 else {
-    echo(json_encode(array("error" => "No device ID and / or update method ID supplied.")));
+    echo(json_encode(array("error" => "No device ID and / or update method ID supplied.", "update_information_available" => false, "system_is_up_to_date" => false)));
 }
