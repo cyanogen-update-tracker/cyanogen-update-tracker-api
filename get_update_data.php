@@ -47,24 +47,10 @@ if($device_id != null && $update_method_id != null && $device_id != "" && $updat
         $totalCountQuery->execute();
 
         $totalCountResult = $totalCountQuery->fetch(PDO:: FETCH_COLUMN);
-        error_log($totalCountResult);
-
-        $systemIsUpToDateQuery = $database->prepare("SELECT incremental FROM update_data_new WHERE device_id = :device_id AND update_method_id = :update_method_id AND is_latest_version = 1 ORDER BY id DESC LIMIT 1");
-        $systemIsUpToDateQuery->bindParam(':device_id', $device_id);
-        $systemIsUpToDateQuery->bindParam(':update_method_id', $update_method_id);
-        $systemIsUpToDateQuery->execute();
-
-        $systemIsUpToDateResult = $systemIsUpToDateQuery->fetch(PDO:: FETCH_ASSOC);
 
         $systemIsUpToDate = false;
 
-        if($updateMethod['requires_incremental_parent'] == true) {
-            $systemIsUpToDate = ($systemIsUpToDateResult["incremental"] == $incremental_parent);
-        } else {
-            $systemIsUpToDate = true;
-        }
-
-        echo json_encode(array("information" => "unable to find a more recent build", "update_information_available" => $totalCountResult[0] != 0, "system_is_up_to_date" => $systemIsUpToDate));
+        echo json_encode(array("information" => "unable to find a more recent build", "update_information_available" => $totalCountResult[0] != 0, "system_is_up_to_date" => true));
     } else {
         $result = $query->fetch(PDO::FETCH_ASSOC);
         $result["update_information_available"] = true;
