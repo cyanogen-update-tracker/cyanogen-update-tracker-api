@@ -1,0 +1,20 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^devices$ get_devices.php
+RewriteRule ^devices/$ get_devices.php
+
+RewriteRule ^updateMethods/([0-9]+)?$ get_update_methods.php?device_id=$1
+RewriteRule ^updateMethods/([0-9]+)/?$ get_update_methods.php?device_id=$1
+
+RewriteRule ^updateDataLink/([0-9]+)/([0-9]+)?$ get_update_data_link.php?device_id=$1&update_method_id=$2
+RewriteRule ^updateDataLink/([0-9]+)/([0-9]+)/?$ get_update_data_link.php?device_id=$1&update_method_id=$2
+
+RewriteRule ^serverStatus$ get_server_status.php
+RewriteRule ^serverStatus/$ get_server_status.php
+
+RewriteRule ^serverMessages$ get_server_messages.php
+RewriteRule ^serverMessages/$ get_server_messages.php
+
+RewriteRule ^registerDevice$ register-device.php
+RewriteRule ^registerDevice/$ register-device.php [L]
