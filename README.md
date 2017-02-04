@@ -31,6 +31,10 @@ git clone https://github.com/arjanvlek/cyanogen-update-tracker-api.git
 ####Hosting:
 - Use PHPMyAdmin and restore `database.sql`
 
+###Database notes:
+- By restoring the `database.sql` file, you'll get an empty database on your server.
+- The update_data and update_data_link tables are for older versions of the app only. Use the update_data_new table for the latest version of the app
+- The notifications_device and notifications_update_data columns are used to mark notifications for new devices / versions as sent. This is normally done by an admin tool, but I can't open source that tool due to security reasons.
 
 ###Deploying the API
 - On your server, create a folder called `api` and place all the various folders (v2, v2.1, v3, v3.1) in there.
