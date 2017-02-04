@@ -1,28 +1,28 @@
 # Cyanogen Update Tracker (API)
 Cyanogen Update Tracker API for Web servers.
 
-This is the server-level API. It is used for hosting:
+This is the back-end for the Cyanogen Update Tracker app. It is used for hosting:
 - available devices
 - available update methods
-- available update data links
-- device registrations for notifications
+- update data
+- device registrations for push notifications
 
 ##How to develop?
 
 ###Prerequisites:
 This api requires:
 - Web server (VPS or Hosting)
-- PHP 5.4 or later
+- PHP 7.0 or later
 - MySQL 5.5 or later
 
 ###Obtaining the code:
 The code can be obtained by cloning the project:
 ```
-git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
+git clone https://github.com/arjanvlek/cyanogen-update-tracker-api.git
 ```
 
 ###Setting up the database:
-- Add the MySQL username and password in `Repository/DatabaseConnector.php` 
+- Add your MySQL username and password in `Repository/DatabaseConnector.php` 
 - Execute the MySQL database creation script from Git (`database.sql`):
 
 ####VPS:
@@ -35,10 +35,10 @@ git clone https://github.com/arjanvlek/android-cyanogen-update-tracker-api.git
 ###Deploying the API
 - On your server, create a folder called `api` and place all the various folders (v2, v2.1, v3, v3.1) in there.
 - Note: The v1 and the v1.1 folders are deprecated and no longer supported due to internal database changes and enforced HTTPS encryption.
-
+- If you want a test version as well, do the same as above but this time make a folder `test` and place the `api` folder in there. You can create a separate test database.
 - Your server will have the following lay-out:
-    - /api/ -> this project.
-    - /test/api/ -> the [test API project] (https://github.com/arjanvlek/android-cyanogen-update-tracker-test-api).
+    - /api/ -> API folder.
+    - /test/api/ -> Test API folder, if you require it.
 
 ###Testing the API
 - You should be able to navigate to `<your_domain_name>/api/v3.1/devices` and see a list of all the devices.
