@@ -7,10 +7,21 @@ This is the back-end for the Cyanogen Update Tracker app. It is used for hosting
 - update data
 - device registrations for push notifications
 
+##Contributing
+If you'd like to contribute to this project, create a pull request with your changes. Once they're approved, they will be merged to the appropriate branch.
+
+If you have a really great feature / improvement and like to have it in the live version of the API, which is used by the Google Play version, please [contact the main developer] (mailto:arjan.vlek.dev@gmail.com) to get it merged to the private play store repository.
+
+There are a few rules / limitations for getting live version commits approved:
+- The code must be tested in conjunction with the app on a real Cyanogen OS (or Lineage OS, if you add support for that) device, and on a computer / server which simulates the environment mentioned below
+- Breaking changes must go into a new version folder (ex. `v3.2` or `v4`)
+- Changes to the database structure should be pushed in a new SQL file. Database changes may never cause data to get lost. All data should always be migrated.
+- These rules don't apply if you only want to contribute to your own fork or copy of the app
+
 ##How to develop?
 
 ###Prerequisites:
-This api requires:
+This API requires:
 - Web server (VPS or Hosting)
 - PHP 7.0 or later
 - MySQL 5.5 or later
