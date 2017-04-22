@@ -19,8 +19,8 @@ RewriteRule ^serverStatus/$ get_server_status.php
 RewriteRule ^serverMessages/([0-9]+)/([0-9]+)?$ get_server_messages.php?device_id=$1&update_method_id=$2
 RewriteRule ^serverMessages/([0-9]+)/([0-9]+)/?$ get_server_messages.php?device_id=$1&update_method_id=$3
 
-RewriteRule ^installGuide/([0-9])/([0-9]+)/([0-5]+)?$ get_install_guide.php?device_id=$1&update_method_id=$2&page_number=$3
-RewriteRule ^installGuide/([0-9])/([0-9]+)/([0-5]+)/?$ get_install_guide.php?device_id=$1&update_method_id=$2&page_number=$3
+RewriteRule ^installGuide/([0-9]+)/([0-9]+)/([1-5])?$ get_install_guide.php?device_id=$1&update_method_id=$2&page_number=$3
+RewriteRule ^installGuide/([0-9]+)/([0-9]+)/([1-5])/?$ get_install_guide.php?device_id=$1&update_method_id=$2&page_number=$3
 
 RewriteRule ^registerDevice$ register-device.php
 RewriteRule ^registerDevice/$ register-device.php [L]
