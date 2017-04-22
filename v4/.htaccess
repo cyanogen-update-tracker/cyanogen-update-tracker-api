@@ -1,0 +1,29 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^cyanogenModApiUrl$ get_cm_api_url.php
+RewriteRule ^cyanogenModApiUrl/$ get_cm_api_url.php
+
+RewriteRule ^devices$ get_devices.php
+RewriteRule ^devices/$ get_devices.php
+
+RewriteRule ^updateMethods/([0-9-]+)?$ get_update_methods.php?device_id=$1
+RewriteRule ^updateMethods/([0-9-]+)/?$ get_update_methods.php?device_id=$1
+
+RewriteRule ^updateData/([0-9]+)/([0-9]+)/([a-zA-Z0-9._-]+)?$ get_update_data.php?device_id=$1&update_method_id=$2&incremental_parent=$3
+RewriteRule ^updateData/([0-9]+)/([0-9]+)/([a-zA-Z0-9._-]+)/?$ get_update_data.php?device_id=$1&update_method_id=$2&incremental_parent=$3
+
+RewriteRule ^mostRecentUpdateData/([0-9]+)/([0-9]+)?$ get_most_recent_update_data.php?device_id=$1&update_method_id=$2
+RewriteRule ^mostRecentUpdateData/([0-9]+)/([0-9]+)/?$ get_most_recent_update_data.php?device_id=$1&update_method_id=$2
+
+RewriteRule ^serverParameters$ get_server_parameters.php
+RewriteRule ^serverParameters/$ get_server_parameters.php
+
+RewriteRule ^serverMessages/([0-9]+)/([0-9]+)?$ get_server_messages.php?device_id=$1&update_method_id=$2
+RewriteRule ^serverMessages/([0-9]+)/([0-9]+)/?$ get_server_messages.php?device_id=$1&update_method_id=$3
+
+RewriteRule ^installGuide/([0-9]+)/([0-9]+)/([1-5])?$ get_install_guide.php?device_id=$1&update_method_id=$2&page_number=$3
+RewriteRule ^installGuide/([0-9]+)/([0-9]+)/([1-5])/?$ get_install_guide.php?device_id=$1&update_method_id=$2&page_number=$3
+
+RewriteRule ^registerDevice$ register-device.php
+RewriteRule ^registerDevice/$ register-device.php [L]
